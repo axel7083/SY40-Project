@@ -1,4 +1,5 @@
 # SY40-Project
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/axel7083/SY40-Projec/C/C++%20CI)
 
 The goal of this program is to `simulate` the behaviour of a jam factory. We split the problem in 4 separated elements which must be synchronized.
 -	The small jar injector
@@ -10,6 +11,7 @@ We need to make the same exercise using two separate sets of tools
 -	Threads and monitors
 For both we can write a solution (pseudo-code) considering we have a function P(int i) which is called by a processus/threads waiting for another processus/threads to call V(int i).
 
+## Pseudo-code
 
 <table>
 <tr>
@@ -85,13 +87,3 @@ End
 </td>
 </tr>
 </table>
-
-
-
-TODO:
-- [x] Make a workflow for compiling
-- [ ] Make doc
-- [ ] Check memory leaks
-- [ ] Make README with example 
-- [ ] Remove unused libaries
-- [ ] Check code quality

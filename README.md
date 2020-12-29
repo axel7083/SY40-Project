@@ -1,5 +1,5 @@
 # SY40-Project
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/axel7083/SY40-Projec/C/C++%20CI)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/axel7083/SY40-Project/C_CI)
 
 The goal of this program is to `simulate` the behaviour of a jam factory. We split the problem in 4 separated elements which must be synchronized.
 -	The small jar injector

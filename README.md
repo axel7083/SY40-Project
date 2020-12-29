@@ -6,6 +6,7 @@ The goal of this program is to `simulate` the behaviour of a jam factory. We spl
 -	The big jar injector
 -	The valve
 -	The clock
+
 We need to make the same exercise using two separate sets of tools
 -	Processus and semaphores
 -	Threads and monitors

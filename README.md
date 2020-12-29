@@ -88,3 +88,15 @@ End
 </td>
 </tr>
 </table>
+
+## Usage
+
+```
+ Usage ./main
+  -t              , run the demo using threads and monitors. (Default use semaphores and processus)
+  -v, --verbose   , explain what is being done
+  -g1 [VALUE]     , number of small jar to produce (Default 1)
+  -g2 [VALUE]     , number of big jar to produce (Default 1)
+  -h, --help      , display this help and exit
+      --version   , output version information and exit
+```

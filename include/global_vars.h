@@ -12,7 +12,7 @@ Usage %s\
 \n  -g1 [VALUE]     , number of small jar to produce (Default 1)\
 \n  -g2 [VALUE]     , number of big jar to produce (Default 1)\
 \n  -h, --help      , display this help and exit\
-\n      --version   , output version information and exit";
+\n      --version   , output version information and exit\n";
 static const char version[] = "1.0";
 
 #endif 

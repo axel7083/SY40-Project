@@ -100,3 +100,11 @@ End
   -h, --help      , display this help and exit
       --version   , output version information and exit
 ```
+
+## Build from source
+
+This project is using Make to build. Run `make -f makefile [OPTION]`. 
+
+Options are:
+- Clean
+- Run

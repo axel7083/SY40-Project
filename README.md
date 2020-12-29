@@ -12,18 +12,9 @@ We need to make the same exercise using two separate sets of tools
 -	Threads and monitors
 For both we can write a solution (pseudo-code) considering we have a function P(int i) which is called by a processus/threads waiting for another processus/threads to call V(int i).
 
-| Jar Function | Valve Function | Clock Function | Jar_2 Function |
-|-|-|-|-|
-| ```Start|
-|While True Then|
-|Insert_Jar()|
-|V(1)|
-|P(0)|
-|Remove_Jar()|
-|V(3)|
-|P(3)|
-|End While|
-|End ```| Start<br>While True Then<br>    P(1)<br>    Open_Valve()<br>    V(2)<br>    P(2)<br>    Close_Valve()<br>    V(0)<br>End While<br>End | Start<br>While True Then<br>    P(2)<br>    Sleep(30)<br>    V(2)<br>End While<br>End | Start<br>While True Then<br>    P(3)<br>    Insert_Jar()<br>    For i from 0 to 2<br>        V(1)<br>        P(0)<br>    Remove_Jar()<br>    V(3)<br>End While<br>End |
+| Jar Function                                                                                                                         | Valve Function                                                                                                                        | Clock Function                                                                        | Jar_2 Function                                                                                                                                                        |
+|--------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Start<br>While True Then<br>    Insert_Jar()<br>    V(1)<br>    P(0)<br>    Remove_Jar()<br>    V(3)<br>    P(3)<br>End While<br>End | Start<br>While True Then<br>    P(1)<br>    Open_Valve()<br>    V(2)<br>    P(2)<br>    Close_Valve()<br>    V(0)<br>End While<br>End | Start<br>While True Then<br>    P(2)<br>    Sleep(30)<br>    V(2)<br>End While<br>End | Start<br>While True Then<br>    P(3)<br>    Insert_Jar()<br>    For i from 0 to 2<br>        V(1)<br>        P(0)<br>    Remove_Jar()<br>    V(3)<br>End While<br>End |
 
 TODO:
 - [x] Make a workflow for compiling

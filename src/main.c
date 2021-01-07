@@ -128,7 +128,7 @@ int main(int argc, char *argv[])
     else
         setup_threads();
 
-    log_("Main","All goals reached.\n");
+    log_(TAG,"All goals reached.\n");
     return(0);
 }
 

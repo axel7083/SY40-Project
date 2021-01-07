@@ -50,6 +50,7 @@ void* Bocal(void *arg) {
         if(count-1 < goal_2) { //If the goal of bocal_2 is not reached
             V(3);
             P(3);   
+            sleep(1);
         }
     }
     V(3);
@@ -78,7 +79,7 @@ void* Horloge(void *arg) {
         log_(TAG, "Sleeping 10s");
         sleep(10);
         V(2);
-        sleep(1); //reset time
+        //sleep(1); //reset time
     }
 }
 

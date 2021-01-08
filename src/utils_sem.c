@@ -14,18 +14,18 @@
 int sem_id ; //identificateur des sémaphores
 struct sembuf sem_oper_P ;  /* Operation P */
 struct sembuf sem_oper_V ;  /* Operation V */
-
+ union semun {
+	int val;
+	struct semid_ds *stat;
+	short * array;
+} ctl_arg;
 /*********************************************************************/
 
 int initsem(key_t semkey) 
 {
     
 	int status = 0;	
-   	union semun {
-		int val;
-		struct semid_ds *stat;
-		short * array;
-	} ctl_arg;
+
 	
     if ((sem_id = semget(semkey, 5, IFLAGS)) > 0) { //Création de 4 sémaphores
 		
@@ -56,3 +56,7 @@ void V_sem(int semnum) {
 	semop(sem_id,&sem_oper_V,1);
 }
 
+void clean_sem()
+{
+	semctl(sem_id, 0, IPC_RMID, ctl_arg);
+}

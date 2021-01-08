@@ -79,7 +79,7 @@ void* Horloge(void *arg) {
         log_(TAG, "Sleeping 10s");
         sleep(10);
         V(2);
-        //sleep(1); //reset time
+        sleep(1); //reset time
     }
 }
 
@@ -89,13 +89,16 @@ void setup_processus()
     int i,semid; //Semid : identificateur des sémaphores
     initsem(SKEY); //On initialise le tableau de sémaphores
 
-    create_processus(Horloge);
-    create_processus(Valve);
+    int pid_clock = create_processus(Horloge);
+    int pid_valve = create_processus(Valve);
     create_processus(Bocal_2);
     create_processus(Bocal);
     
     P(4); // Wait one of the processus finish
     P(4); // **
+	clean_sem();
+	kill(pid_clock, SIGQUIT);
+	kill(pid_valve, SIGQUIT);	
 }
 
 void setup_threads()

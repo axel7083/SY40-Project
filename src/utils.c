@@ -47,11 +47,13 @@ void V(int index) {
         V_threads(factory,getCond(index));
 }
 
-void create_processus ( void *(*f)(void *) ) {
-    if (! fork()) {
+int create_processus ( void *(*f)(void *) ) {
+	int pid = fork();
+    if (! pid) {
         (*f)(NULL);
         exit(0);
     }
+	return pid;
 }
 
 void log_(char TAG[], char *fmt, ...)
